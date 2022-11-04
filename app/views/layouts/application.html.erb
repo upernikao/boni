@@ -11,7 +11,9 @@
 
   <body>
     <%= render partial: "layouts/partials/application-header" %>
-    <%= yield %>
-    <%= javascript_include_tag params[:controller] %>
+    <div id="app">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag "#{params[:controller]}/application" %>
   </body>
 </html>

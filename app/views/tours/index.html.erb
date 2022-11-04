@@ -1,17 +1,3 @@
 
+<router-view></router-view>
 <%= link_to "New Tour", new_tour_path, class: 'button'%>
-
-<div class='columns'>
-<% @tours.each do |tour|%>
-  <div class='card column'>
-    <div class='card-content'>
-      <p class='card-header-title'><%= tour.name %></p>
-    </div>
-    <div class='card-content'>
-      <div class='content'>
-        <%= tour.description %>
-      </div>
-    </div>
-  </div>
-<% end %>
-</div>
