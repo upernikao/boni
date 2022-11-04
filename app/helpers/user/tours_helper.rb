@@ -1,0 +1,2 @@
+module User::ToursHelper
+end

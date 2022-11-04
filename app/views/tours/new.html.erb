@@ -1,0 +1,21 @@
+<h1>New Tour</h1>
+<%= form_with model: @tour do |form| %>
+    <div class='field'>
+        <%= form.label :name, "Tour name: ", class: 'label'%>
+        <div class='control'>
+            <%= form.text_field :name, class: 'input' %>
+        </div>
+    </div>
+    <div class='field'>
+        <%= form.label :description, "Tour description: ", class: 'label'%>
+        <div class='control'>
+            <%= form.text_field :description, class: 'input' %>
+        </div>
+    </div>
+
+    <div class='field'>
+        <div class='control'>
+            <%= form.submit "Create", class: 'button is-primary' %>
+        </div>
+    </div>
+<% end %>

@@ -5,7 +5,7 @@ class Tour
   field :name, type: String
   field :description, type: String
 
-  belongs_to :creator, class_name: "User"
+  belongs_to :user, class_name: "User"
 
   validates :name, presence: true
   validates :description, presence: true

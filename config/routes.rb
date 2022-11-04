@@ -15,13 +15,15 @@ Rails.application.routes.draw do
       :sessions => "users/sessions",
   }
 
-
+  resources :tours
 
   unauthenticated :user do
     root to: "websites#home", as: :unauthenticated_user
+    get :how_it_works, to: "websites#how_it_works"
   end
 
   authenticated :user do
-    root to: "websites#home"
+    root to: "dashboards#show", as: :authenticated_user
+    # get :how_it_works, to: "websites#how_it_works"
   end
 end

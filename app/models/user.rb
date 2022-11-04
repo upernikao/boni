@@ -35,7 +35,7 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
 
-  has_many :tours_created, class_name: "Tour"
-  has_many :user_tours,   class_name: "Tour"
+  has_many :tours, class_name: "Tour"
+  has_many :user_tours,   class_name: "User::Tour"
 
 end
